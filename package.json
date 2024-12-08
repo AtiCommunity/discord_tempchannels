@@ -1,9 +1,11 @@
 {
   "name": "tempchannels",
   "version": "1.0.0",
-  "description": "Discord BOT that provide channels management service.",
+  "description": "Discord application that provide channels management service.",
   "main": "main.js",
+  "type": "commonjs",
   "scripts": {
+    "start": "nodemon main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/AtiCommunity/discord_tempchannels/issues"
   },
-  "homepage": "https://github.com/AtiCommunity/discord_tempchannels#readme"
+  "homepage": "https://github.com/AtiCommunity/discord_tempchannels#readme",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.7",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  },
+  "devDependencies": {
+    "eslint": "^9.16.0"
+  }
 }
