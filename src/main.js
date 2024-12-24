@@ -5,13 +5,14 @@ const path = require("path");
 const {
     Client,
     Collection,
-    Events,
     GatewayIntentBits,
     REST,
     Routes,
 } = require("discord.js");
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates],
+});
 
 console.log("Started loading application events.");
 
