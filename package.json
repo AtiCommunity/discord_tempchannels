@@ -5,7 +5,7 @@
   "main": "main.js",
   "type": "commonjs",
   "scripts": {
-    "start": "nodemon main.js",
+    "start": "nodemon src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,11 +22,10 @@
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.7",
     "fs": "^0.0.1-security",
-    "nodemon": "^3.1.7",
-    "path": "^0.12.7",
-    "url": "^0.11.4"
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "eslint": "^9.16.0"
+    "eslint": "^9.16.0",
+    "nodemon": "^3.1.7"
   }
 }
