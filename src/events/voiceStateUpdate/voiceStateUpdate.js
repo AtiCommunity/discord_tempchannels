@@ -15,13 +15,13 @@ module.exports = {
                 type: ChannelType.GuildVoice,
                 parent: newState.guild.channels.cache.find(
                     (channel) =>
-                        channel.name === Category &&
+                        channel.name == Category &&
                         channel.type == ChannelType.GuildCategory
                 ),
             });
             const newCreatedChannel = newState.guild.channels.cache.find(
                 (channel) =>
-                    channel.name === joiningUser.user.displayName &&
+                    channel.name == joiningUser.user.displayName &&
                     channel.type == ChannelType.GuildVoice
             );
             if (newState.channel)
@@ -31,7 +31,7 @@ module.exports = {
         if (oldStateChannelName == leavingUser.user.displayName) {
             const oldChannelMemberSize = oldState.channel.members.size;
             const channelFinder = oldState.guild.channels.cache.find(
-                (channel) => channel.name === leavingUser.user.displayName
+                (channel) => channel.name == leavingUser.user.displayName
             );
             if (oldChannelMemberSize > 0) {
                 const userFinder =
