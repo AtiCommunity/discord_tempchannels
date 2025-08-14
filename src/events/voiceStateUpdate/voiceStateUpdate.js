@@ -10,7 +10,7 @@ module.exports = {
         const leavingUser = oldState.member;
 
         if (newStateChannelName == Channel) {
-            newState.guild.channels.create({
+            await newState.guild.channels.create({
                 name: joiningUser.user.displayName,
                 type: ChannelType.GuildVoice,
                 parent: newState.guild.channels.cache.find(
