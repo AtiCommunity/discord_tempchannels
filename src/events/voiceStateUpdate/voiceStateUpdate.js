@@ -19,16 +19,14 @@ module.exports = {
                         channel.type == ChannelType.GuildCategory
                 ),
             });
-            setTimeout(() => {
-                const newCreatedChannel = newState.guild.channels.cache.find(
-                    (channel) =>
-                        channel.name === joiningUser.user.displayName &&
-                        channel.type == ChannelType.GuildVoice
-                );
-                if (newState.channel)
-                    joiningUser.voice.setChannel(newCreatedChannel);
-                else newCreatedChannel.delete();
-            }, 1000);
+            const newCreatedChannel = newState.guild.channels.cache.find(
+                (channel) =>
+                    channel.name === joiningUser.user.displayName &&
+                    channel.type == ChannelType.GuildVoice
+            );
+            if (newState.channel)
+                joiningUser.voice.setChannel(newCreatedChannel);
+            else newCreatedChannel.delete();
         }
         if (oldStateChannelName == leavingUser.user.displayName) {
             const oldChannelMemberSize = oldState.channel.members.size;
